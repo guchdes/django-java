@@ -1,0 +1,64 @@
+//仓库配置，在根项目的 buildscript 块中调用
+// buildscript {
+//     apply from: "${rootDir}/gradle/repo.gradle"
+// }
+ext {
+    //默认的仓库
+    repoUrls = ['https://maven.aliyun.com/repository/public']
+    pluginsRepoUrls = ['https://maven.aliyun.com/repository/spring-plugin', 'https://maven.aliyun.com/repository/gradle-plugin']
+
+    def LOCAL_REPO_URL = 'LOCAL_REPO_URL'
+    if (System.getenv(LOCAL_REPO_URL) != null) {
+        //优先使用系统环境变量的配置
+        println "Using local repository configured by system env $LOCAL_REPO_URL"
+        repoUrls = pluginsRepoUrls = [System.getenv(LOCAL_REPO_URL)]
+    } else if (project.hasProperty(LOCAL_REPO_URL)) {
+        //其次使用 gradle.properties 的配置
+        println "Using local repository configured by properties $LOCAL_REPO_URL"
+        repoUrls = pluginsRepoUrls = [project.property(LOCAL_REPO_URL)]
+    } else {
+        println "Using default repository"
+    }
+
+    println "repoUrls: $repoUrls"
+    println "pluginsRepoUrls: $pluginsRepoUrls"
+
+    //项目仓库配置
+    repoConfigurer = {
+        configurations.all {
+            //不缓存snapshot包
+            resolutionStrategy { cacheChangingModulesFor 0, 'seconds' }
+        }
+        //配置项目仓库
+        repositories {
+            repoUrls.forEach { u ->
+                maven { url u }
+            }
+        }
+    }
+
+    //插件仓库配置
+    pluginRepoConfigurer = {
+        configurations.all {
+            //不缓存snapshot包，建议gradle插件不要使用snapshot版本，
+            // 在多项目环境下用snapshot版本插件会大大减慢gradle执行脚本的速度
+            resolutionStrategy { cacheChangingModulesFor 0, 'seconds' }
+        }
+        repositories {
+            pluginsRepoUrls.forEach { u ->
+                maven { url u }
+            }
+        }
+    }
+}
+
+//配置所有项目
+allprojects {
+    configure(it, repoConfigurer)
+
+    //配置项目gradle插件仓库 （执行gradle脚本本身需要）
+    buildscript {
+        configure(it, pluginRepoConfigurer)
+    }
+}
+

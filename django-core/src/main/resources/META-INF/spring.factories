@@ -1,0 +1,4 @@
+# AutoConfiguration
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.guchdes.django.core.spring.DjangoAutoConfiguration

@@ -1,0 +1,7 @@
+rootProject.name = 'django'
+
+include "django-core"
+include 'django-bson'
+
+include ':examples:using-spring-boot'
+

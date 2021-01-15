@@ -1,0 +1,117 @@
+/**
+ * 在需要发布的项目中调用:
+ * apply from: "${rootDir}/gradle/publish.gradle"
+ */
+
+buildscript {
+    configure(it, pluginRepoConfigurer)
+    dependencies {
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.27.0'
+    }
+}
+
+import java.time.OffsetDateTime
+import java.time.format.DateTimeFormatter
+
+apply plugin: 'maven-publish'
+apply plugin: "com.github.ben-manes.versions"
+
+static isReleaseVersion(project) {
+    !(project.getVersion() =~ /-SNAPSHOT$/)
+}
+
+ext {
+    def buildTimeAndDate = OffsetDateTime.now()
+    buildDate = DateTimeFormatter.ISO_LOCAL_DATE.format(buildTimeAndDate)
+    buildTime = DateTimeFormatter.ofPattern('HH:mm:ss.SSSZ').format(buildTimeAndDate)
+    buildRevision = versioning.info.commit
+}
+
+// Copy LICENSE
+tasks.withType(Jar) {
+    from(project.rootDir) {
+        include 'LICENSE'
+        into 'META-INF'
+    }
+}
+
+// Generate MANIFEST.MF
+jar {
+    doFirst {
+        manifest {
+
+            attributes(
+                    'Created-By': "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString(),
+                    'Built-By': "travis",
+                    'Build-Date': buildDate,
+                    'Build-Time': buildTime,
+                    'Built-OS': "${System.properties['os.name']}",
+                    'Build-Revision': buildRevision,
+                    'Specification-Title': project.name,
+                    'Specification-Version': "${projectVersion}",
+                    'Implementation-Title': project.name,
+                    'Implementation-Version': "${projectVersion}",
+            )
+        }
+    }
+}
+
+//发布源码
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allJava
+    classifier = 'sources'
+}
+
+project.afterEvaluate {
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+
+                from components.java
+                artifact sourcesJar
+
+                pom {
+                    name = 'django-java'
+                    description = 'django-java'
+
+                    url = 'https://github.com/guchdes/grpc-spring-boot-starter'
+                    licenses {
+                        license {
+                            name = 'MIT License'
+                            url = 'http://www.opensource.org/licenses/mit-license.php'
+                            distribution = 'repo'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id = 'guch'
+                            name = 'guch'
+                            email = 'g129512gz@gmail.com'
+                        }
+                    }
+
+                    scm {
+                        connection = 'scm:git:git://github.com/guchdes/django-java.git'
+                        developerConnection = 'scm:git:git@github.com:guchdes/django-java.git'
+                        url = 'https://github.com/guchdes/django-java.git'
+                    }
+                }
+            }
+        }
+
+        repositories {
+            maven {
+                credentials {
+                    username project.property('REPO_USER')
+                    password project.property('REPO_PASS')
+                }
+                if (isReleaseVersion(project)) {
+                    url project.property('PUBLISH_REALEASE_REPO_URL')
+                } else {
+                    url project.property('PUBLISH_SNAPSHOT_REPO_URL')
+                }
+            }
+        }
+    }
+}

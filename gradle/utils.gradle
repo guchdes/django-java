@@ -1,0 +1,9 @@
+
+// 输出启动进程时的参数，包括所有classpath
+allprojects {
+    tasks.withType(JavaExec) {
+        doFirst {
+            println "exec $commandLine"
+        }
+    }
+}

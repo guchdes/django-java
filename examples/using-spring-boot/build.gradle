@@ -1,0 +1,6 @@
+version = "${projectVersion}"
+
+dependencies {
+    api project(":django-core")
+    api("org.springframework.boot:spring-boot-starter-web")
+}

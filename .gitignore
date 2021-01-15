@@ -1,0 +1,37 @@
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.classpath
+.project
+.DS_Store
+
+### gradle maven ###
+.gradle
+build/
+target/
+
+application-local.yml
+application-local.yaml
+application-local.properties
+
+.git
+.github
+svnignore.svnprops
+/out/
+*.log
+.svn
