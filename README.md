@@ -7,7 +7,7 @@ django-java是一个Java语言的mongodb对象文档映射(ODM)框架，目标�
 django-java的核心特性是支持部分更新，根据对文档的修改，自动生成更新语句，实现真正意义上的对象文档映射。
 在大部分场景下，你不需要手动来构造出`filter`和`update`等mongodb语句。
 
-关于为什么要使用部分更新，可以参考wiki的[介绍部分](https://github.com/guchdes/django-java/wiki/Introduction)。
+关于为什么要使用部分更新，请查看[Wiki的介绍](https://github.com/guchdes/django-java/wiki/)。
 
 ### Features
 - 支持结合spring boot，配置简单，快速上手。
@@ -33,7 +33,7 @@ django-java的核心特性是支持部分更新，根据对文档的修改，自
 Gradle:
 ```gradle
 dependencies {
-  implementation 'io.github.guchdes:django:3.0.0'
+  implementation 'io.github.guchdes:django-java:3.0.0'
 }
 ```
 
@@ -41,7 +41,7 @@ Maven:
 ```xml
 <dependency>
   <groupId>io.github.guchdes</groupId>
-  <artifactId>django</artifactId>
+  <artifactId>django-java</artifactId>
   <version>3.0.0</version>
 </dependency>
 ```
