@@ -45,7 +45,12 @@ Maven:
   <version>3.0.0</version>
 </dependency>
 ```
+---
+**NOTE**
 
+由于maven中心账号出问题，目前jar包上传还在处理中
+
+---
 ---
 **NOTE**
 
