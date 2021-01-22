@@ -41,7 +41,7 @@ Maven:
 ```xml
 <dependency>
   <groupId>io.github.guchdes</groupId>
-  <artifactId>django-java</artifactId>
+  <artifactId>django</artifactId>
   <version>3.3.3</version>
 </dependency>
 ```
@@ -54,5 +54,5 @@ Maven:
 
 ### Documentation
   * [User guide](https://github.com/guchdes/django-java/wiki): This guide contains examples on how to use django-java in your code.
-  * [Change log](https://github.com/guchdes/django-java/master/CHANGELOG.md): Changes in the recent versions
+  * [Change log](https://github.com/guchdes/django-java/blob/master/CHANGELOG.md): Changes in the recent versions
 
