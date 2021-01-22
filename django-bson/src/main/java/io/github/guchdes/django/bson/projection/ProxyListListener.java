@@ -28,8 +28,8 @@ import io.github.guchdes.django.bson.projection.containerlisten.ListListener;
 import java.util.List;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 class ProxyListListener<E> extends ProxyCollectionListener<E> implements ListListener<E> {
 

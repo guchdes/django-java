@@ -33,8 +33,8 @@ import java.util.function.Supplier;
 /**
  * 使用HashSet做为实现类
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @NotThreadSafe
 public class DocumentSet<E> extends DocumentCollection<E> implements Set<E> {

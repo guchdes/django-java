@@ -34,8 +34,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface ConcurrentOperationalDao {
 

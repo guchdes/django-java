@@ -39,8 +39,8 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class DjangoAnnotationInjectionProcessor extends AnnotationInjectionProcessor implements Ordered {
 

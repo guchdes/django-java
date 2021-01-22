@@ -33,8 +33,8 @@ import java.util.function.UnaryOperator;
 /**
  * 使用ArrayList存储元素的DocumentList
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @NotThreadSafe
 public class DocumentList<E> extends DocumentCollection<E> implements List<E> {
@@ -71,17 +71,13 @@ public class DocumentList<E> extends DocumentCollection<E> implements List<E> {
         return (List<E>) collection;
     }
 
-    /**
-     * 复制到普通list，list的元素全部深层复制
-     */
+    //deep clone to ArrayList
     @SuppressWarnings("unchecked")
     public ArrayList<E> cloneToArrayList() {
         return (ArrayList<E>) deepCloneCollection(() -> new ArrayList<>(size()));
     }
 
-    /**
-     * 复制到普通list，list的元素全部深层复制
-     */
+    //deep clone to List
     @SuppressWarnings({"unchecked", "rawtypes"})
     public <T extends List<E>> T cloneToList(Supplier<T> listSupplier) {
         return (T) deepCloneCollection((Supplier) listSupplier);

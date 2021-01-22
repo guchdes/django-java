@@ -34,8 +34,8 @@ import java.util.Set;
  * <p>
  * 可以做简单的字段增删，增删时要处理操作符中的内容
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 interface WriteContentDocument {
     String SET_OPERATOR = "$set";

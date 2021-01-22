@@ -31,8 +31,8 @@ import java.util.*;
 /**
  * 使用TreeMap实现
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @NotThreadSafe
 public class TreeDocumentMap<K, V> extends DocumentMap<K, V> implements NavigableMap<K, V> {

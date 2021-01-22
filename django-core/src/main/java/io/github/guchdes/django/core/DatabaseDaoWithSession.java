@@ -34,8 +34,8 @@ import java.io.Closeable;
  * <p>
  * 调用此dao的所有CRUD方法时，都会使用绑定的session。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface DatabaseDaoWithSession extends Closeable, DatabaseMetaDao, KeyOperationalDao,
         CollectionOperationalDao, ConcurrentOperationalDao {

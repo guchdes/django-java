@@ -28,8 +28,8 @@ import com.mongodb.MongoClientSettings;
 import java.util.function.BiConsumer;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface MongoDataSourceConfigurer extends BiConsumer<String, MongoClientSettings.Builder> {
 

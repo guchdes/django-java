@@ -28,8 +28,8 @@ import io.github.guchdes.django.core.KeyOperationalDao;
 /**
  * 调用 {@link KeyOperationalDao}的方法时，传递的key不合法
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class IllegalKeyDjangoException extends DjangoException {
 

@@ -33,8 +33,8 @@ import javax.annotation.Nullable;
 /**
  * 主要的数据库操作接口。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface DatabaseDao extends DatabaseMetaDao, KeyOperationalDao, CollectionOperationalDao, ConcurrentOperationalDao {
 

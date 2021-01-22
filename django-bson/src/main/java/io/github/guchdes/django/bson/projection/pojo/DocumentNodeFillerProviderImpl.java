@@ -42,8 +42,8 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 class DocumentNodeFillerProviderImpl implements DocumentNodeFillerProvider {
 

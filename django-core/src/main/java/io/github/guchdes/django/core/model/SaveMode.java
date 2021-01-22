@@ -27,8 +27,8 @@ import io.github.guchdes.django.core.DatabaseDao;
 import io.github.guchdes.django.core.KeyOperationalDao;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  * @see KeyOperationalDao#saveByKey
  * @see DatabaseDao#saveByFields
  */

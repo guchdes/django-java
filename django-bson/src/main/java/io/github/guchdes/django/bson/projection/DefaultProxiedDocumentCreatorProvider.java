@@ -47,8 +47,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Slf4j
 public class DefaultProxiedDocumentCreatorProvider implements ProxiedDocumentCreatorProvider {

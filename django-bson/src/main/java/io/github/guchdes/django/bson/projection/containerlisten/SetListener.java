@@ -28,8 +28,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface SetListener<T> extends CollectionListener<T> {
 

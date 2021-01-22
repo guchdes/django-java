@@ -30,7 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author guch
+ * @author guch
  */
 public class BsonDocumentBuilder {
 

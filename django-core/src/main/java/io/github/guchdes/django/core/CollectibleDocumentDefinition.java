@@ -39,8 +39,8 @@ import java.util.function.Function;
 /**
  * {@link CollectibleDocument}的类信息，从 {@link CollectibleDocumentDefinitions}获取
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface CollectibleDocumentDefinition {
 
@@ -139,8 +139,8 @@ public interface CollectibleDocumentDefinition {
     /**
      * 从document获取key
      *
-     * @Author guch
-     * @Since 3.0.0
+     * @author guch
+     * @since 3.0.0
      */
     interface KeyExtractor {
 

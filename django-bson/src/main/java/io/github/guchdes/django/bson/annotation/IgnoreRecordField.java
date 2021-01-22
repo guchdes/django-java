@@ -31,8 +31,8 @@ import java.lang.annotation.Target;
 /**
  * 不记录更新的字段
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

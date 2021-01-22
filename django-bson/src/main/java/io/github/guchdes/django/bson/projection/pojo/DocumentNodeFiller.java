@@ -32,8 +32,8 @@ import java.util.function.Consumer;
  * <p>
  * 每个类型有一个DocumentNodeFiller，DocumentNodeFiller中可以预先初始化所有字段信息，避免在每次填充时对每个字段查找类型map。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface DocumentNodeFiller<T extends DocumentNode> extends Consumer<T> {
 }

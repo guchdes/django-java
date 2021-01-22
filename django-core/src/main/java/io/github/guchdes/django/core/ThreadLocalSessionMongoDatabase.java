@@ -37,8 +37,8 @@ import java.util.function.Supplier;
 /**
  * @see #doWithNewSession
  * @see #doWithNewSessionTx
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ThreadLocalSessionMongoDatabase extends SessionBindingMongoDatabase {
 

@@ -31,8 +31,8 @@ import javax.annotation.Nullable;
 /**
  * 缓存配置查找优先级： {@link DocumentCacheConfigs}对单个类型的配置 -> 类型的EnableDocumentCache注解配置 -> {@link DocumentCacheConfigs}的全局配置
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface DocumentCacheConfigs {
 

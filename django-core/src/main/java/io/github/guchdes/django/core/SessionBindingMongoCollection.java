@@ -41,8 +41,8 @@ import java.util.List;
 import java.util.function.Supplier;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class SessionBindingMongoCollection<T> {
     private final com.mongodb.client.MongoCollection<T> mongoCollection;

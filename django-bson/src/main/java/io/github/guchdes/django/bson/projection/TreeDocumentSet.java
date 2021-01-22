@@ -31,8 +31,8 @@ import java.util.*;
 /**
  * 使用TreeSet做为实现类
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class TreeDocumentSet<E> extends DocumentSet<E> implements NavigableSet<E> {
 

@@ -49,8 +49,8 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 /**
  * 创建 {@link CollectibleDocument} 时，自动开启 update collect
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class AutoEnableUCCodecRegistry implements CodecRegistry {
 

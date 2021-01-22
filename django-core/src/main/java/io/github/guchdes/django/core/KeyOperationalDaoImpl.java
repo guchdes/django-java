@@ -50,8 +50,8 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Slf4j(topic = "io.github.guchdes.django.core.dao")
 class KeyOperationalDaoImpl extends AbstractDao implements KeyOperationalDao {

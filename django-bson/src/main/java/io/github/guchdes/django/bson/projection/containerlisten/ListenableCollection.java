@@ -35,8 +35,8 @@ import java.util.stream.Stream;
 import static io.github.guchdes.django.bson.projection.containerlisten.RemoveAndGetObjectCollection.ResultState.REMOVE_FAILED;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ListenableCollection<E> implements Collection<E>, ListenableContainer {
 

@@ -31,8 +31,8 @@ import java.util.function.Supplier;
  * 为了避免执行同一次容器操作时, 在不同的方法里面多次重复调用Listener, 在执行操作时先获取锁(不是线程锁).
  * 得到锁才调用Listener, 没得到锁不调用Listener, 无论是否得到锁, 容器操作正常进行.
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 class ChangeLock {
 

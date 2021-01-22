@@ -36,8 +36,8 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class DefaultMapStringKeyConverters {
     public static ExternalMapStringKeyConverter<String> STRING_CONVERTER = new ExternalMapStringKeyConverter<String>() {

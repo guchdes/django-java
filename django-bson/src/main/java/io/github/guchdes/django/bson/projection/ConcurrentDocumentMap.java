@@ -41,8 +41,8 @@ import java.util.function.Supplier;
  * 使用ConcurrentHashMap实现。
  * get等读取方法是无锁的。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @ThreadSafe
 public class ConcurrentDocumentMap<K, V> extends DocumentMap<K, V> implements ConcurrentMap<K, V> {

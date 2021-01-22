@@ -32,8 +32,8 @@ import javax.annotation.Nullable;
 import java.util.Map;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 class ProxyMapListener<K, V> extends ProxyContainerListener<V, Map<K, V>> implements MapListener<K, V> {
 

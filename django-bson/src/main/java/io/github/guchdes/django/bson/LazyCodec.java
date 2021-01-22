@@ -35,8 +35,8 @@ import java.util.function.Supplier;
 /**
  * 解决死循环问题
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class LazyCodec<T> implements Codec<T> {
     private final LazyInitializer<Codec<T>> supplier;

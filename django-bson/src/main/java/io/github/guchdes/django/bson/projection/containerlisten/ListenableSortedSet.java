@@ -27,8 +27,8 @@ import java.util.Comparator;
 import java.util.SortedSet;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ListenableSortedSet<E> extends ListenableSet<E> implements SortedSet<E> {
 

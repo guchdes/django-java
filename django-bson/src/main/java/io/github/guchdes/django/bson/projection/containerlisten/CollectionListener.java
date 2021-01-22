@@ -1,18 +1,18 @@
 /**
  * MIT License
- *
+ * <p>
  * Copyright (c) 2021 the original author or authors.
- *
+ * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * <p>
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- *
+ * <p>
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -30,8 +30,8 @@ import java.util.List;
 /**
  * 容器监听器，监控元素的进出
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface CollectionListener<E> extends ContainerListener<E, Collection<E>> {
 
@@ -55,7 +55,7 @@ public interface CollectionListener<E> extends ContainerListener<E, Collection<E
      * 添加元素后
      *
      * @param collection 包装后的collection
-     * @param value
+     * @param value the added element
      * @param isTail     是否确定在尾部添加 (调用 {@link Collection#add}就算尾部)，
      *                   如果是不确定是否在尾部（比如通过subList添加），则传递false。
      */
@@ -65,7 +65,7 @@ public interface CollectionListener<E> extends ContainerListener<E, Collection<E
      * 添加元素后
      *
      * @param collection 包装后的collection
-     * @param values
+     * @param values the added elements
      * @param isTail     是否在确定尾部添加 (调用 {@link Collection#add}就算尾部)，
      *                   如果是不确定是否在尾部（比如通过subList添加），则传递false。
      */
@@ -75,7 +75,7 @@ public interface CollectionListener<E> extends ContainerListener<E, Collection<E
      * 移除元素后
      *
      * @param collection 包装后的collection
-     * @param value
+     * @param value the removed element
      */
     void afterRemove(Collection<E> collection, Object value);
 
@@ -83,7 +83,7 @@ public interface CollectionListener<E> extends ContainerListener<E, Collection<E
      * 移除元素后
      *
      * @param collection 包装后的collection
-     * @param values
+     * @param values the removed elements
      */
     void afterRemoveAll(Collection<E> collection, Collection<?> values);
 

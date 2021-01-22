@@ -26,8 +26,8 @@ package io.github.guchdes.django.bson.projection;
 /**
  * 表示一个 {@link DocumentNode} 被尝试赋值到多个parent
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class MultiParentException extends DocumentClassDefinitionException {
 

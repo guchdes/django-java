@@ -32,8 +32,8 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 abstract class DocumentCollection<E> extends ContainerDocumentNode implements Collection<E> {
 

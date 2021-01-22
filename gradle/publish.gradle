@@ -14,11 +14,8 @@ import java.time.OffsetDateTime
 import java.time.format.DateTimeFormatter
 
 apply plugin: 'maven-publish'
+apply plugin: 'signing'
 apply plugin: "com.github.ben-manes.versions"
-
-static isReleaseVersion(project) {
-    !(project.getVersion() =~ /-SNAPSHOT$/)
-}
 
 ext {
     def buildTimeAndDate = OffsetDateTime.now()
@@ -37,42 +34,56 @@ tasks.withType(Jar) {
 
 // Generate MANIFEST.MF
 jar {
-    doFirst {
-        manifest {
-
-            attributes(
-                    'Created-By': "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString(),
-                    'Built-By': "travis",
-                    'Build-Date': buildDate,
-                    'Build-Time': buildTime,
-                    'Built-OS': "${System.properties['os.name']}",
-                    'Build-Revision': buildRevision,
-                    'Specification-Title': project.name,
-                    'Specification-Version': "${projectVersion}",
-                    'Implementation-Title': project.name,
-                    'Implementation-Version': "${projectVersion}",
-            )
-        }
+    manifest {
+        attributes(
+                'Created-By': "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString(),
+                'Built-By': "travis",
+                'Build-Date': buildDate,
+                'Build-Time': buildTime,
+                'Built-OS': "${System.properties['os.name']}",
+                'Build-Revision': buildRevision,
+                'Specification-Title': project.name,
+                'Specification-Version': "${projectVersion}",
+                'Implementation-Title': project.name,
+                'Implementation-Version': "${projectVersion}",
+        )
     }
 }
 
-//发布源码
-task sourcesJar(type: Jar) {
-    from sourceSets.main.allJava
-    classifier = 'sources'
+def publishOnlyPom = project.findProperty("publishOnlyPom") == true
+def localPublish = project.findProperty("LOCAL_REPO_PUBLISH")?.toLowerCase() == "true"
+if (!publishOnlyPom) {
+    //发布源码
+    task sourcesJar(type: Jar) {
+        from sourceSets.main.allJava
+        classifier = 'sources'
+    }
+
+    task javadocJar(type: Jar) {
+        from javadoc
+        classifier = 'javadoc'
+    }
 }
 
 project.afterEvaluate {
+
+    def isReleaseVersion = !(project.getVersion() =~ /-SNAPSHOT$/)
+
     publishing {
         publications {
             mavenJava(MavenPublication) {
 
                 from components.java
-                artifact sourcesJar
+                if (!publishOnlyPom) {
+                    artifact sourcesJar
+                    artifact javadocJar
+                } else {
+                    setArtifacts([])
+                }
 
                 pom {
                     name = 'django-java'
-                    description = 'django-java'
+                    description = 'A java ODM (Object Document Mapping) framework for mongodb.'
 
                     url = 'https://github.com/guchdes/grpc-spring-boot-starter'
                     licenses {
@@ -85,9 +96,9 @@ project.afterEvaluate {
 
                     developers {
                         developer {
-                            id = 'guch'
+                            id = 'guchdes'
                             name = 'guch'
-                            email = 'g129512gz@gmail.com'
+                            email = '237129512@qq.com'
                         }
                     }
 
@@ -100,17 +111,54 @@ project.afterEvaluate {
             }
         }
 
-        repositories {
-            maven {
-                credentials {
-                    username project.property('REPO_USER')
-                    password project.property('REPO_PASS')
+        if (localPublish) {
+            repositories {
+                maven {
+                    credentials {
+                        username project.property('LOCAL_REPO_USER')
+                        password project.property('LOCAL_REPO_PASS')
+                    }
+
+                    if (isReleaseVersion) {
+                        url  project.property('LOCAL_REPO_REALEASE')
+                    } else {
+                        url  project.property('LOCAL_REPO_SNAPSHOT')
+                    }
                 }
-                if (isReleaseVersion(project)) {
-                    url project.property('PUBLISH_REALEASE_REPO_URL')
-                } else {
-                    url project.property('PUBLISH_SNAPSHOT_REPO_URL')
+            }
+        } else {
+            repositories {
+                maven {
+                    credentials {
+                        username project.property('ossrhUsername')
+                        password project.property('ossrhPassword')
+                    }
+
+                    if (isReleaseVersion) {
+                        url "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+                    } else {
+                        url "https://oss.sonatype.org/content/repositories/snapshots"
+                    }
                 }
+            }
+
+            signing {
+                sign publishing.publications.mavenJava
+            }
+
+        }
+
+        javadoc {
+            options {
+                encoding "UTF-8"
+                charSet 'UTF-8'
+                locale 'zh_CN'
+                failOnError = false
+            }
+            options.addBooleanOption('Xdoclint:none', true)
+            options.encoding = "utf-8"
+            if(JavaVersion.current().isJava9Compatible()) {
+                options.addBooleanOption('html5', true)
             }
         }
     }

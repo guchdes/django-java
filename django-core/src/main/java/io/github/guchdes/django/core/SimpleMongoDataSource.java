@@ -28,8 +28,8 @@ import com.mongodb.client.MongoClient;
 import java.util.Objects;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class SimpleMongoDataSource implements MongoDataSource {
 

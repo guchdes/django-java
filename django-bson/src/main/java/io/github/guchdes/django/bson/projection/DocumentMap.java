@@ -40,8 +40,8 @@ import java.util.function.Supplier;
  * {@link io.github.guchdes.django.bson.projection.pojo.GlobalModels#regMapStringKeyConverter(Class, ExternalMapStringKeyConverter)}
  * 默认可以使用String/Integer/Long/ObjectId.
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @NotThreadSafe
 public class DocumentMap<K, V> extends ContainerDocumentNode implements Map<K, V> {
@@ -61,6 +61,7 @@ public class DocumentMap<K, V> extends ContainerDocumentNode implements Map<K, V
     }
 
     /**
+     * @param map map
      * @param isSyncRecording 是否对记录更新和修改map加锁，保证map的最终状态和更新记录一致。
      *                        此加锁不保证map本身的并发安全。(如不保证同时读写，同时写和遍历等操作并发安全)
      */

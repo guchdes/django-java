@@ -29,8 +29,8 @@ import io.github.guchdes.django.core.CollectibleDocumentDefinition;
 import java.util.function.Supplier;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface CachePlugin {
 

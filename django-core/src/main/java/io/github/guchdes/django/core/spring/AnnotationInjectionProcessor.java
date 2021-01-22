@@ -46,7 +46,7 @@ import java.util.function.Predicate;
 /**
  * 提供通过注解向bean的字段或setter注入对象的通用方式
  *
- * @Author guch
+ * @author guch
  */
 public class AnnotationInjectionProcessor implements BeanPostProcessor {
 

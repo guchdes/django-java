@@ -31,8 +31,8 @@ import io.github.guchdes.django.core.annotation.CollectionName;
  * 一个 {@link CollectibleDocument} 文档类对应一个MongoCollection，应用不需要管理文档存在哪个表，只需要定义文档类名和结构。
  * 默认类名对应collection，可以用{@link CollectionName}注解指定collection。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface DatabaseMetaDao {
 

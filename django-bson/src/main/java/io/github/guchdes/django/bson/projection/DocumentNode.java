@@ -1,18 +1,18 @@
 /**
  * MIT License
- *
+ * <p>
  * Copyright (c) 2021 the original author or authors.
- *
+ * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * <p>
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- *
+ * <p>
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -73,8 +73,8 @@ import java.util.function.Supplier;
  * - 一个文档类和容器类的对象，只能同时赋值到一个父节点，否则抛出异常 {@link MultiParentException}。如果需要把同一个文档对象赋值到多个
  * 父节点，可以调用 {@link #deepCloneSelf()}方法先复制一个对象。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Slf4j
 public abstract class DocumentNode {
@@ -88,7 +88,7 @@ public abstract class DocumentNode {
     }
 
     /**
-     * 通过无参构造方法创建代理对象
+     * @return 通过无参构造方法创建代理对象
      */
     public static <T extends DocumentNode> T create(Class<T> documentClass) {
         return create(documentClass, GlobalModels.isFillNullByEmpty(documentClass));
@@ -358,7 +358,7 @@ public abstract class DocumentNode {
     }
 
     private void recordCollectionOp0(String path, BiConsumer<MongoUpdateCollector, String> updateCollectorConsumer,
-                                         boolean isStart) {
+                                     boolean isStart) {
         if (__updateCollector.hasEnableUpdateCollect()) {
             if (path.isEmpty()) {
                 throw new IllegalStateException("collection cannot as root");

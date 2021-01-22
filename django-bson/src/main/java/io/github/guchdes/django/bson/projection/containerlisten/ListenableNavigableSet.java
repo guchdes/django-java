@@ -27,8 +27,8 @@ import java.util.Iterator;
 import java.util.NavigableSet;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ListenableNavigableSet<E> extends ListenableSortedSet<E> implements NavigableSet<E> {
     public ListenableNavigableSet(NavigableSet<E> set, SetListener<E> listener) {

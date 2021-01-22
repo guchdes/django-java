@@ -30,8 +30,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class NoActionBultWriteResult extends BulkWriteResult {
     @Override

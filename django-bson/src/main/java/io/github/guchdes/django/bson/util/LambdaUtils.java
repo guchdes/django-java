@@ -45,10 +45,7 @@ import java.util.*;
  * IListSize fun = List::size 相当于
  * IListSize fun = getInstanceMethodInvoker(List.class.getMethod("size"), IListSize.class)
  * <p>
- * // TODO 添加类型检查
- *
- * @Author Create by jxz
- * @Date 2019/3/22
+ * @author guch
  */
 public class LambdaUtils {
 
@@ -130,7 +127,6 @@ public class LambdaUtils {
      *
      * @param aClass 类
      * @param <T>
-     * @return
      */
     @SuppressWarnings("unchecked")
     public static <T> ThrowingSupplier<T, Exception> getDefaultConstructorInvoker(Class<T> aClass) {

@@ -24,13 +24,15 @@
 package io.github.guchdes.django.bson.projection;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface ProxiedDocumentCreator<T extends DocumentNode> {
 
     /**
      * 使用无参构造方法创建代理的DocumentNode对象
+     *
+     * @return new document object
      */
     T create();
 
@@ -39,6 +41,7 @@ public interface ProxiedDocumentCreator<T extends DocumentNode> {
      *
      * @param paramTypes 构造方法参数类型
      * @param args 构造方法参数列表
+     * @return new document object
      */
     T create(Class<?>[] paramTypes, Object[] args);
 }

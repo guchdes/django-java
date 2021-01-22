@@ -26,8 +26,8 @@ package io.github.guchdes.django.bson.projection.pojo;
 import java.util.List;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 interface CreateInstanceInvoker<T> {
 

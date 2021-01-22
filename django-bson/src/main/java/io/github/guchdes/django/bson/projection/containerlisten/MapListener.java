@@ -29,8 +29,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface MapListener<K, V> extends ContainerListener<V, Map<K, V>> {
 

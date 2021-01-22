@@ -41,8 +41,8 @@ import static io.github.guchdes.django.core.WriteContentDocument.Mode.UPDATE;
  * 文档初始为CollectibleDocument或Bson对象，如果有字段操作需求时，转换为Document对象，
  * 如果没有字段操作的需求，则可以避免多余的复制过程。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 class DefaultWriteContentDocument implements WriteContentDocument {
 

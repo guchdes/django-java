@@ -31,8 +31,8 @@ import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class DocumentModifyingBson implements Bson {
 

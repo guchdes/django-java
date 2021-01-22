@@ -42,8 +42,8 @@ import java.util.function.Supplier;
  * 创建SessionBindingMongoDatabase时可以传递一个SessionSupplier，每次调用方法时，尝试获取session，如果Supplier返回不为null
  * 则使用session。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class SessionBindingMongoDatabase {
     private final com.mongodb.client.MongoDatabase delegated;

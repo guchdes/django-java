@@ -54,8 +54,8 @@ import java.util.*;
 import java.util.function.Supplier;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Slf4j(topic = "io.github.guchdes.django.core.dao")
 public abstract class AbstractDao implements DatabaseMetaDao, KeyOperationalDao {

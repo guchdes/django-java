@@ -32,8 +32,8 @@ import java.lang.annotation.Target;
  * 表示一个类是不可变类型，可以当做DocumentNode的字段类型
  *
  * @see io.github.guchdes.django.bson.projection.DocumentNode
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

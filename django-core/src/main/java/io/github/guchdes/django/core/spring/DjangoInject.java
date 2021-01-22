@@ -34,8 +34,8 @@ import java.lang.annotation.Target;
 /**
  * 字段注入 {@link DatabaseDaoFactory} 或 {@link DatabaseDao}
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

@@ -30,8 +30,8 @@ import io.github.guchdes.django.core.DaoConfig;
 import java.util.function.Consumer;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface DaoFactoryConfigurer extends Consumer<DaoFactoryConfig.Builder> {
 

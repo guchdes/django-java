@@ -33,8 +33,8 @@ import org.bson.codecs.ValueCodecProvider;
 import java.util.Collection;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ProxySetListener<E> extends ProxyCollectionListener<E> implements SetListener<E> {
 

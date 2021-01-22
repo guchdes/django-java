@@ -30,8 +30,8 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 class ProxyCollectionListener<E> extends ProxyContainerListener<E, Collection<E>> implements CollectionListener<E> {
     private final IncomingElementTransformer<E> transformer;

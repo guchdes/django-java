@@ -31,8 +31,8 @@ import io.github.guchdes.django.bson.util.LazyInitializer;
 import lombok.Getter;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ConfigMongoDataSource implements MongoDataSource {
 

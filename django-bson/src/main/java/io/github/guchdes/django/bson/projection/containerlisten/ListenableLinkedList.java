@@ -36,8 +36,8 @@ import static io.github.guchdes.django.bson.projection.containerlisten.RemoveAnd
 /**
  * 监听ListenableLinkedList.
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ListenableLinkedList<E> extends ListenableList<E> implements ListenableContainer, Deque<E> {
 

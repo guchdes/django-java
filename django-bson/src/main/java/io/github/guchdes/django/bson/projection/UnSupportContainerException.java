@@ -26,8 +26,8 @@ package io.github.guchdes.django.bson.projection;
 /**
  * 容器字段的类型不支持
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class UnSupportContainerException extends DocumentClassDefinitionException {
 

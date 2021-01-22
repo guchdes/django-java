@@ -26,8 +26,8 @@ package io.github.guchdes.django.bson.projection;
 /**
  * 浅层复制
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface ShadowCloner {
 

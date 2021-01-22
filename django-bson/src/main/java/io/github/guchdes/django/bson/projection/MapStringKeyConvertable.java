@@ -26,18 +26,21 @@ package io.github.guchdes.django.bson.projection;
 /**
  * 一个类实现此方法，表示此类可以作为 {@link DocumentMap} 的key，能够转换为字段名
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface MapStringKeyConvertable<T extends MapStringKeyConvertable<T>> {
 
     /**
      * 转换为字段名，必须是合法的名称标识符
+     *
+     * @return the field name in Bson
      */
     String toStringKey();
 
     /**
-     * @return 创建新的对象
+     * @param s the field name in Bson
+     * @return the key object
      */
     T fromStringKey(String s);
 }

@@ -35,8 +35,8 @@ import java.lang.annotation.Target;
  * 一个类上只能标注一个 {@link KeyField}，如果有多个key字段，用 {@link KeyClass}标注。
  *
  * @see KeyOperationalDao
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})

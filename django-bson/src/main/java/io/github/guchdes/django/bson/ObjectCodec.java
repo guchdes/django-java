@@ -34,8 +34,8 @@ import static org.bson.codecs.BsonValueCodecProvider.getBsonTypeClassMap;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ObjectCodec implements Codec<Object> {
 

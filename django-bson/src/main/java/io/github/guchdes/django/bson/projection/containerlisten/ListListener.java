@@ -27,8 +27,8 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface ListListener<T> extends CollectionListener<T> {
 

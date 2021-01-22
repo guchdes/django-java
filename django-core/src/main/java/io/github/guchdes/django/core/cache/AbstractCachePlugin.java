@@ -30,8 +30,8 @@ import io.github.guchdes.django.core.util.Attribute;
 import io.github.guchdes.django.core.util.AttributeKey;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public abstract class AbstractCachePlugin implements CachePlugin {
     public static final AttributeKey<DocumentCacheConfigs.SingleItemCacheConfig> CACHE_CONFIG_KEY = AttributeKey.valueOf("CACHE_CONFIG");

@@ -34,8 +34,8 @@ import java.util.function.UnaryOperator;
 /**
  * 使用 {@link LinkedList}存储元素的DocumentList
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @NotThreadSafe
 public class LinkedDocumentList<E> extends DocumentList<E> implements Deque<E> {
@@ -62,9 +62,7 @@ public class LinkedDocumentList<E> extends DocumentList<E> implements Deque<E> {
         return (ListenableLinkedList<E>) collection;
     }
 
-    /**
-     * 复制到普通list，list的元素全部深层复制
-     */
+    //deep clone to LinkedList
     @SuppressWarnings({"unchecked", "rawtypes"})
     public <T extends LinkedList<E>> T cloneToLinkedList() {
         return (T) deepCloneCollection((Supplier) LinkedList::new);

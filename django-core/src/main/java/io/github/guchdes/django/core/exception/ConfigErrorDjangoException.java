@@ -26,8 +26,8 @@ package io.github.guchdes.django.core.exception;
 /**
  * 配置错误
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ConfigErrorDjangoException extends DjangoException {
 

@@ -42,7 +42,7 @@ Maven:
 <dependency>
   <groupId>io.github.guchdes</groupId>
   <artifactId>django-java</artifactId>
-  <version>3.0.0</version>
+  <version>3.3.3</version>
 </dependency>
 ```
 ---

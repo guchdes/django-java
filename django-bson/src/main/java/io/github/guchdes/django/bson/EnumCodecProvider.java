@@ -35,8 +35,8 @@ import org.bson.codecs.configuration.CodecRegistry;
 import java.util.function.Function;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class EnumCodecProvider implements CodecProvider {
 

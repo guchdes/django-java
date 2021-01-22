@@ -28,8 +28,8 @@ package io.github.guchdes.django.bson.projection;
  * 在decode EnumMap的时候，如果Enum实现了此接口，则使用index代替枚举名作为字段名。
  * 如果Document的字段是IndexedEnum，则字段的值也用index代替枚举名。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface IndexedEnum {
     int getIndex();

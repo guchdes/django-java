@@ -30,8 +30,8 @@ import java.util.SortedMap;
 
 /**
 *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ListenableSortedMap<K, V> extends ListenableMap<K, V> implements SortedMap<K, V> {
 

@@ -45,8 +45,8 @@ import java.util.function.Supplier;
  * mongodb中表示字段为空有字段不存在和字段值为Null两种情况，在Key中使用null字段值时，这两种情况都可以匹配。供。
  * 在创建Dao对象时还可以为每个Dao对象独立配置是否使用缓存，通过 {@link #isCacheEnable()}确认当前Dao是否使用缓存。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  * @see CollectibleDocument
  */
 public interface KeyOperationalDao {

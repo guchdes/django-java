@@ -26,8 +26,8 @@ package io.github.guchdes.django.bson.projection;
 import io.github.guchdes.django.bson.projection.containerlisten.ContainerListener;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 class ProxyContainerListener<E, C> implements ContainerListener<E, C> {
 

@@ -39,8 +39,8 @@ import java.util.stream.Collectors;
  * 示例：
  * MultiEquals.start("name", "mike").and("age", 20)
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class MultiEquals implements Bson {
 

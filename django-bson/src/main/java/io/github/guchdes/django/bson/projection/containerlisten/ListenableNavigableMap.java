@@ -26,8 +26,8 @@ package io.github.guchdes.django.bson.projection.containerlisten;
 import java.util.*;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ListenableNavigableMap<K, V> extends ListenableSortedMap<K, V> implements NavigableMap<K, V> {
 

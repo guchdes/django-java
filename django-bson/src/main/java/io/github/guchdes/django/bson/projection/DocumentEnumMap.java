@@ -32,8 +32,8 @@ import java.util.Map;
 /**
  * Map的实现是EnumMap。入库时属性名默认为Enum名，如果Enum类实现了 {@link IndexedEnum}，则属性名是index。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @NotThreadSafe
 public class DocumentEnumMap<K extends Enum<K>, V> extends DocumentMap<K, V> implements Map<K, V> {

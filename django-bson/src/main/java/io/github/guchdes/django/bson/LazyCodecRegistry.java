@@ -29,8 +29,8 @@ import org.bson.codecs.configuration.CodecRegistry;
 import java.util.function.Supplier;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class LazyCodecRegistry implements CodecRegistry {
     //每次调用应该返回(功能上)相同的codecRegistry

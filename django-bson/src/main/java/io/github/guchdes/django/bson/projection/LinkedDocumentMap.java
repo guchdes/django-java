@@ -31,8 +31,8 @@ import java.util.Map;
 /**
  * 有序的DocumentMap.
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @NotThreadSafe
 public class LinkedDocumentMap<K, V> extends DocumentMap<K, V> implements Map<K, V> {

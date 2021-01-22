@@ -41,8 +41,8 @@ import org.bson.json.JsonWriterSettings;
 import java.io.Reader;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class BsonUtils {
 

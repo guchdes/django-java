@@ -34,8 +34,8 @@ import java.util.function.Supplier;
 /**
  * 使用ConcurrentHashMap做为实现类
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @ThreadSafe
 public class ConcurrentDocumentSet<E> extends DocumentSet<E> implements Set<E> {

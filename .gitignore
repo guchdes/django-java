@@ -21,7 +21,7 @@
 .DS_Store
 
 ### gradle maven ###
-.gradle
+.gradle/
 build/
 target/
 

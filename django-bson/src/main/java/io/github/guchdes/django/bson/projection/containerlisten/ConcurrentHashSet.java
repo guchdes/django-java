@@ -29,8 +29,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import static io.github.guchdes.django.bson.projection.containerlisten.RemoveAndGetObjectCollection.ResultState.REMOVE_FAILED;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ConcurrentHashSet<E> extends AbstractSet<E> implements RemoveAndGetObjectCollection {
 

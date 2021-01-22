@@ -30,8 +30,8 @@ package io.github.guchdes.django.bson.projection;
  * <p>
  * {@link DocumentNode}中的字段不能是 {@link NotProxy}类型的
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface NotProxy {
 }

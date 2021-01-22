@@ -39,8 +39,8 @@ import java.lang.annotation.Target;
  * 如果不使用此注解，比如有多个用来cas的version字段，可以在调用{@link DatabaseDao#casUpdateByVersion(CollectibleDocument, String)}
  * 方法时指定version字段名。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  * @see DatabaseDao#casUpdateByVersion
  */
 @Target(ElementType.FIELD)

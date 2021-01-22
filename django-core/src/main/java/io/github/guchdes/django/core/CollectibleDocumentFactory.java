@@ -24,8 +24,8 @@
 package io.github.guchdes.django.core;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface CollectibleDocumentFactory {
 

@@ -33,8 +33,8 @@ import java.lang.annotation.Target;
 /**
  * 默认调用 {@link KeyOperationalDao}中的方法时，文档的key不能有null字段 (id是key时，id也不能为null)，除非文档类上有此注解。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

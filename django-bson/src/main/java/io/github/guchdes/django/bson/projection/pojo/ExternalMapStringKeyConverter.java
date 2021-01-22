@@ -27,8 +27,8 @@ package io.github.guchdes.django.bson.projection.pojo;
  * 定义一个类型和String相互转换的方法，从而能在document类的map字段中使用String之外的key
  *
  * @see io.github.guchdes.django.bson.projection.MapStringKeyConvertable
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface ExternalMapStringKeyConverter<K> {
 

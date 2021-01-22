@@ -52,7 +52,7 @@ public final class Conventions {
     /**
      * The annotation convention.
      *
-     * <p>Applies all the conventions related to the default {@link annotations}.</p>
+     * <p>Applies all the conventions related to the default annotations.</p>
      */
     public static final Convention ANNOTATION_CONVENTION = new ConventionAnnotationImpl();
 

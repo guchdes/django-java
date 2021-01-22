@@ -60,8 +60,8 @@ import static io.github.guchdes.django.core.model.MongoModels._id;
 import static io.github.guchdes.django.core.model.MongoModels.idEquals;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Slf4j(topic = "io.github.guchdes.django.core.dao")
 class DatabaseDaoImpl extends CacheableDocumentDao implements DatabaseDao {

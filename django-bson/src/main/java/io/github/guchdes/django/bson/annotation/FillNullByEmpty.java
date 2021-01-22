@@ -36,8 +36,8 @@ import java.lang.annotation.Target;
  * <p>
  * 初始化完之后才开始进行记录更新，当save对象的时候，如果空对象从未修改过，则没有它的更新记录，所以不会入库。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

@@ -33,8 +33,8 @@ import java.util.function.UnaryOperator;
 /**
  * 使用CopyOnWriteArrayList存储元素的DocumentList
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @ThreadSafe
 public class CopyOnWriteDocumentList<E> extends DocumentCollection<E> implements List<E> {
@@ -59,17 +59,13 @@ public class CopyOnWriteDocumentList<E> extends DocumentCollection<E> implements
         return (List<E>) collection;
     }
 
-    /**
-     * 复制到普通list，list的元素全部深层复制
-     */
+    //deepclone to ArrayList
     @SuppressWarnings("unchecked")
     public ArrayList<E> toArrayList() {
         return (ArrayList<E>) deepCloneCollection(() -> new ArrayList<>(size()));
     }
 
-    /**
-     * 复制到普通list，list的元素全部深层复制
-     */
+    //deepclone to List
     @SuppressWarnings("unchecked")
     public <T extends List<E>> T toList(Supplier<T> listSupplier) {
         return (T) deepCloneCollection((Supplier<Collection<?>>) (Object) listSupplier);
@@ -79,25 +75,6 @@ public class CopyOnWriteDocumentList<E> extends DocumentCollection<E> implements
     @SuppressWarnings("unchecked")
     public CopyOnWriteDocumentList<E> deepCloneSelf() {
         return super.deepCloneSelf();
-    }
-
-    /**
-     * 如果list的元素是{@link DocumentNode}，可以调用此方法，把当前复制到普通List，同时所有元素
-     * 转换为 {@link NotProxy} 类型。
-     */
-    public <C extends NotProxy> List<C> toNotProxyList(Class<C> clazz) {
-        return toNotProxyList(clazz, ArrayList::new);
-    }
-
-    public <C extends NotProxy, T extends List<C>> T toNotProxyList(Class<C> clazz, Supplier<T> listSupplier) {
-        T t = listSupplier.get();
-        for (E e : this) {
-            if (!(e instanceof DocumentNode)) {
-                throw new IllegalStateException();
-            }
-            t.add(((DocumentNode) e).deepCloneToNotProxy(clazz));
-        }
-        return t;
     }
 
     /* 代理方法 */

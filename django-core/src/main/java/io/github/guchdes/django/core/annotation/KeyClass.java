@@ -37,8 +37,8 @@ import java.lang.annotation.Target;
  * 要使用 {@link BsonCreator}标注一个构造方法。
  * KeyClass不必是DocumentNode类型。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  * @see KeyOperationalDao
  */
 @Retention(RetentionPolicy.RUNTIME)

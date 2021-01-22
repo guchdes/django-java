@@ -33,8 +33,8 @@ import java.lang.annotation.Target;
 /**
  * 用在 {@link CollectibleDocument}的实现类上，指定此类的存储Collection。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

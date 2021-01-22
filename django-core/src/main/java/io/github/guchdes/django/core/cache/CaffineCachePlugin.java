@@ -36,8 +36,8 @@ import java.util.function.Supplier;
 /**
  * 使用caffine缓存实现
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class CaffineCachePlugin extends AbstractCachePlugin implements CachePlugin {
 

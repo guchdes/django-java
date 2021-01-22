@@ -35,8 +35,8 @@ import java.lang.annotation.Target;
  * 则使用 {@link KeyFieldName}在类上面标出key字段名。
  *
  * @see KeyOperationalDao
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})

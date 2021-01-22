@@ -29,8 +29,8 @@ import org.bson.conversions.Bson;
  * {@link DocumentNode} 的有些方法需要暴露给特定的类，但是又不适合用protect或public，
  * 所以通过此类暴露 {@link DocumentNode} 的包私有方法。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class DocumentNodeHelper {
 

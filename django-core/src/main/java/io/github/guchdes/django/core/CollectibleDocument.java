@@ -51,8 +51,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * 在文档类中用{@link KeyField}或{@link KeyClass}或{@link KeyFieldName}注解定义文档的key。
  * 如果一个类没有注解key，则从其父类查找注解key，如果还是没有，则默认id为key。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public abstract class CollectibleDocument extends DocumentNode implements CollectibleDocumentNode {
 

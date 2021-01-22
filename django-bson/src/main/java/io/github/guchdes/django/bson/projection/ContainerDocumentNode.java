@@ -27,8 +27,8 @@ package io.github.guchdes.django.bson.projection;
  * 嵌套容器的父类。
  * ContainerDocumentNode不能作为根文档。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public abstract class ContainerDocumentNode extends DocumentNode {
 

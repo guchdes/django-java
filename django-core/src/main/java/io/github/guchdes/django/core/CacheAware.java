@@ -33,8 +33,8 @@ import java.lang.annotation.Target;
  *
  * @see io.github.guchdes.django.core.cache.CacheStrategy
  * @see io.github.guchdes.django.core.cache.CachePlugin
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.CLASS)

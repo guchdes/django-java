@@ -24,8 +24,8 @@
 package io.github.guchdes.django.core.exception;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class DocumentNoIdDjangoException extends DjangoException {
     public DocumentNoIdDjangoException() {

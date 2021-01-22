@@ -28,8 +28,8 @@ import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ListenableList<E> extends ListenableCollection<E> implements List<E> {
 

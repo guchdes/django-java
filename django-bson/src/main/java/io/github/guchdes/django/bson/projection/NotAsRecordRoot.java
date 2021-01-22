@@ -31,8 +31,8 @@ package io.github.guchdes.django.bson.projection;
  * <p>
  * 存在这样的限制和此接口的原因可见 AutoEnableUCCodecRegistry
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface NotAsRecordRoot {
 }

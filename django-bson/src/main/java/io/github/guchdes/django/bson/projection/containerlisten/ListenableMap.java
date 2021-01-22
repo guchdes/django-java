@@ -29,8 +29,8 @@ import java.util.*;
 import java.util.function.*;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class ListenableMap<K, V> implements Map<K, V>, ListenableContainer {
 

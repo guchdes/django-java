@@ -33,8 +33,8 @@ import java.util.Objects;
 /**
  * DaoFactory配置，用于创建 {@link DatabaseDaoFactory}
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Getter
 @ToString

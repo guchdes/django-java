@@ -34,19 +34,23 @@ import static io.github.guchdes.django.bson.projection.pojo.GlobalModelsImpl.INS
 /**
  * 获取/注册类结构等信息。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class GlobalModels {
 
     /**
      * 注册ImmutableType
+     *
+     * @param aClass the register class
+     * @param isImmutable is immutable
      */
     public static void regImmutableType(Class<?> aClass, boolean isImmutable) {
         INSTANCE.regImmutableType(aClass, isImmutable);
     }
 
     /**
+     * @param aClass the register class
      * @return 是否ImmutableType
      */
     public static boolean isImmutableType(Class<?> aClass) {
@@ -54,6 +58,7 @@ public class GlobalModels {
     }
 
     /**
+     * @param aClass the class
      * @return 是否简单类型，简单类型不能是容器，且不含有可读取的类字段
      */
     public static boolean isSimpleType(Class<?> aClass) {
@@ -64,6 +69,7 @@ public class GlobalModels {
      * 注册Map的Key转换String类型的方法
      *
      * @see io.github.guchdes.django.bson.projection.MapStringKeyConvertable
+     *
      */
     public static <T> void regMapStringKeyConverter(Class<T> aClass, ExternalMapStringKeyConverter<T> converter) {
         INSTANCE.regMapStringKeyConverter(aClass, converter);

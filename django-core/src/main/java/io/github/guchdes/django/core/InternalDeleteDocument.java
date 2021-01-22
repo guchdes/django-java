@@ -29,8 +29,8 @@ import org.bson.conversions.Bson;
 import javax.annotation.Nullable;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Getter
 class InternalDeleteDocument {

@@ -32,8 +32,8 @@ import java.util.Set;
 /**
  * 当修改了CollectibleDocument的key字段之后，CollectibleDocument和原数据库文档失去关联，此时 disableUpdateCollect
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public class CollectibleDocumentUpdateCollector extends SyncMongoUpdateCollector {
 

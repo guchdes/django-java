@@ -29,8 +29,8 @@ import org.bson.BsonType;
 import static java.lang.String.format;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 class DtBsonHelper {
 

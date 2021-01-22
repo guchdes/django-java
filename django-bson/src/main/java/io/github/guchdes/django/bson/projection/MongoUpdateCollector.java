@@ -34,8 +34,8 @@ import java.util.Set;
 /**
  * 对象更新监听/记录接口
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 public interface MongoUpdateCollector extends BasicUpdateCollector<Bson> {
 
@@ -64,17 +64,25 @@ public interface MongoUpdateCollector extends BasicUpdateCollector<Bson> {
 
     /**
      * 获取MongoUpdate格式的更新记录
+     *
+     * @return MongoUpdate
      */
     @Nullable
     MongoUpdate getMongoUpdate();
 
     /**
      * $set 操作
+     * @param path the path
+     * @param value the assigned value
+     * @param previousValue the previous value
      */
     void setField(String path, Object value, Object previousValue);
 
     /**
      * $unset 操作
+     *
+     * @param path path
+     * @param previousValue previous value
      */
     void unsetField(String path, Object previousValue);
 

@@ -30,25 +30,21 @@ import java.util.Set;
 /**
  * 对象更新监听/记录接口
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  * @param <A> 累积的更新记录
  */
 public interface BasicUpdateCollector<A> {
 
     /**
-     * 获取累积的更新记录
-     *
-     * @return
+     * @return 获取累积的更新记录
      */
     @Nullable
     A getUpdate();
 
     /**
-     * 获取累积的更新记录
-     *
      * @param excludePaths 排除的路径，以这些路径开头的记录都将被排除
-     * @return
+     * @return 获取累积的更新记录
      */
     @Nullable
     A getUpdate(Set<String> excludePaths);

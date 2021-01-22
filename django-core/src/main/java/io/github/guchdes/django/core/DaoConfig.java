@@ -30,8 +30,8 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Getter
 @ToString

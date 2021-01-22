@@ -38,8 +38,8 @@ import java.lang.annotation.Target;
  * <p>
  * 注解处理和配置优先级的实现在{@link AbstractCachePlugin}类中，如果是自定义的CachePlugin，需要继承AbstractCachePlugin或者另行实现缓存逻辑。
  *
- * @Author guch
- * @Since 3.0.0
+ * @author guch
+ * @since 3.0.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
