@@ -33,7 +33,7 @@ django-java的核心特性是支持部分更新，根据对文档的修改，自
 Gradle:
 ```gradle
 dependencies {
-  implementation 'io.github.guchdes:django-java:3.3.3'
+  implementation 'io.github.guchdes:django:3.3.3'
 }
 ```
 
