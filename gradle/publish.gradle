@@ -50,9 +50,22 @@ jar {
     }
 }
 
-def publishOnlyPom = project.findProperty("publishOnlyPom") == true
+javadoc {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        locale 'zh_CN'
+        failOnError = false
+    }
+    options.addBooleanOption('Xdoclint:none', true)
+    options.encoding = "utf-8"
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
+
 def localPublish = project.findProperty("LOCAL_REPO_PUBLISH")?.toLowerCase() == "true"
-if (!publishOnlyPom) {
+if (project != rootProject) {
     //发布源码
     task sourcesJar(type: Jar) {
         from sourceSets.main.allJava
@@ -74,16 +87,12 @@ project.afterEvaluate {
             mavenJava(MavenPublication) {
 
                 from components.java
-                if (!publishOnlyPom) {
-                    artifact sourcesJar
-                    artifact javadocJar
-                } else {
-                    setArtifacts([])
-                }
+                artifact sourcesJar
+                artifact javadocJar
 
                 pom {
                     name = 'django-java'
-                    description = 'A java ODM (Object Document Mapping) framework for mongodb.'
+                    description = 'A java Object Document Mapping framework for mongodb.'
 
                     url = 'https://github.com/guchdes/grpc-spring-boot-starter'
                     licenses {
@@ -148,18 +157,5 @@ project.afterEvaluate {
 
         }
 
-        javadoc {
-            options {
-                encoding "UTF-8"
-                charSet 'UTF-8'
-                locale 'zh_CN'
-                failOnError = false
-            }
-            options.addBooleanOption('Xdoclint:none', true)
-            options.encoding = "utf-8"
-            if(JavaVersion.current().isJava9Compatible()) {
-                options.addBooleanOption('html5', true)
-            }
-        }
     }
 }

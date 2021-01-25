@@ -16,6 +16,6 @@ django:
       weakReference: false
       softReference: true
     classes:
-      io.github.guchdes.django.example.Bag:
+      com.mountsea.django.example.Bag:
         maxSize: 5000
         expireAfterAccessMills: 600000
